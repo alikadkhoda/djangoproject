@@ -1,0 +1,23 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}پروفایل کاربر{% endblock title %}
+
+{% block content %}
+
+    <div class="row" style="margin-top: 170px;margin-right: 70px; width: 90%">
+        <div class="col-md-8 ">
+            <p>نام کاربری: {{ profile.user.username }}</p>
+            <p>نام و نام خانوادگی: {{ profile.user.get_full_name }}</p>
+            <p>تاریخ تولد: {{ profile.birthday }}</p>
+            <p>ایمیل: {{ profile.user.email }}</p>
+            <p>تاریخ پیوستن: {{ profile.user.date_joined }}</p>
+            <p>آخرین بازدید: {{ profile.user.last_login }}</p>
+        </div>
+    <div class="col-md-4" >
+        <img src="{{ profile.ProfileImage.url }}" alt="" style="width: 9rem; height: 9rem; border-radius: 10px">
+    </div>
+       <div class="mb-3" style="margin-top: 5px">
+           <a href="/accounts/profileEdit"><input type="submit" class="btn btn-primary" value=" ویرایش پروفایل" ></a>
+    </div>
+    </div>
+{% endblock content %}

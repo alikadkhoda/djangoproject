@@ -1,0 +1,104 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}وبسایت شخصی علی کدخدا{% endblock title %}
+
+{% block content %}
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="margin-top: 90px">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active carasel" data-bs-interval="10000" >
+        <div style="width: 50%;margin: auto">
+             <img src="{% static 'homePage/images/modares.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: 400px">
+        </div>
+
+      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">
+          <a href="/researchActivities/papers/list/1" class="aa"><h5 >ارایه معیارهای جدید در سیستم های اطلاعاتی زنجیره تامین شرکتها</h5></a>
+        <p class="caraselp">دراین مقاله با ارایه چهار معیار, روشی برای تعیین جایگاه سیستمهای اطلاعاتی در شرکتهایی که زنجیره تامین دارند, ارایه می شود.</p>
+      </div>
+    </div>
+    <div class="carousel-item carasel" data-bs-interval="2000">
+        <div style="width: 50%;margin: auto">
+            <img src="{% static 'homePage/images/tehran.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">
+        </div>
+
+      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">
+          <a href="/researchActivities/papers/list/2" class="aa"><h5>مقابله با حمله های "از کار اندازی سرویس" در شبکه های کامپیوتری</h5></a>
+        <p class="caraselp">قابلیت دسترسی به معنای ارائه سرویس های مورد انتظار و تعریف شده سیستم در زمانهای مورد نظر به کاربران است.</p>
+      </div>
+    </div>
+    <div class="carousel-item carasel" >
+        <div style="width: 50%;margin: auto">
+             <img src="{% static 'homePage/images/102127.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">
+        </div>
+
+      <div class="carousel-caption d-none d-md-block " style="color:white; background-color: #1a1e21">
+          <a href="/researchActivities/papers/list/5" class="aa"><h5>اثرات انیمیشن ها بر روی کودکان</h5></a>
+        <p class="caraselp"> تاثیر کارتون بر کودکان غیرقابل انکار است؛ چراکه کارتونها بر نوع رفتار و رشد شناختی بچه ها هم تاثیر مثبت و هم تاثیر منفی بگذارد.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div class="homeText" >
+{% for bio in biography %}
+        <p name="cat1" style="text-align: center">{{ bio.title }}</p>
+        <p class="textposition">
+            {{ bio.description }}
+        </p>
+        {% endfor %}
+</div>
+<div class="homeText mbtm" >
+{% for fav in favorites %}
+        <p>{{ fav.title }}</p>
+        <p class="textposition">
+            {{ fav.description }}
+        </p>
+        {% endfor %}
+
+</div>
+{#    {% if projects %}#}
+{#    <div class="container">#}
+{#        <p class="text-center">نمونه کارها:</p>#}
+{#         <div class="row">#}
+{#            {% for project in projects %}#}
+{#                <div class="col-md-4" style="margin-bottom: 15px">#}
+{#                    <div >#}
+{#                        <img src="{{ project.project_image.url }}" class="card-img-top" alt="..." style="height: 250px">#}
+{#                        <div class="card-body">#}
+{#                            <h5 class="card-title text-center" style="height: 60px">{{ project.title }}</h5>#}
+{##}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    {% endif %}#}
+{#    </div>#}
+    <p class="text-center">نمونه کارها:</p>
+ <div class="container text-center mbtm" >
+        {% for project in projects  %}
+            <div class="mbtm">
+              <img src="{{ project.project_image.url }}" alt="" class="imgproject">
+              <p>{{ project.title }}</p>
+              <p>{{ project.description }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+
+
+
+{% endblock content %}

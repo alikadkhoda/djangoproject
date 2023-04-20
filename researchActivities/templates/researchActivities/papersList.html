@@ -1,0 +1,41 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}لیست مقالات من{% endblock title %}
+{% block content %}
+
+
+<div class="container" id="services" style="margin-top: 111px">
+<div class="row" style="margin-bottom: 0px; margin-top: 8px">
+    <div class="col s12">
+         <form action="" method="get">
+        {{ SearchForm }}
+             <button class="btn btn-white" type="submit">
+                 <a href=""><img style="height: 30px" src="{% static 'researchActivities/images/icons8-search-more-90.png' %}" alt=""></a>
+             </button>
+
+    </form>
+    </div>
+</div>
+
+    <h1>لیست مقالات</h1>
+
+    {% if papers %}
+        <p>تعداد مقالات من:{{ papersCount }}</p>
+        <div class="row">
+            {% for paper in papers %}
+                <div class="col-md-4" style="margin-bottom: 15px">
+                    <div class="card">
+                        <img src="{{ paper.paper_image.url }}" class="card-img-top" alt="..." style="height: 250px">
+                        <div class="card-body">
+                            <h5 class="card-title" style="height: 60px">{{ paper.title }}</h5>
+                            <p class="scroll-box">{{ paper.abstract }}</p>
+                            <a href="/researchActivities/papers/list/{{ paper.id }}" class="btn btn-primary">اطلاعات بیشتر</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
+{% endblock content %}

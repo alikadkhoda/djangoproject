@@ -1,0 +1,16 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}نمونه کارها{% endblock title %}
+
+{% block content %}
+    <div class="container text-center mbtm" style="margin-top: 111px">
+        {% for project in projects  %}
+            <div class="mbtm">
+              <img src="{{ project.project_image.url }}" alt="" class="imgproject">
+              <p>{{ project.title }}</p>
+              <p>{{ project.description }}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+{% endblock content %}

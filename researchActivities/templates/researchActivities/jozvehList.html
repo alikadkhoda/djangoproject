@@ -1,0 +1,45 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}لیست جزوه ها{% endblock title %}
+{% block content %}
+
+<div class="container" id="services" style="margin-top: 111px">
+<div class="row" style="margin-bottom: 0px; margin-top: 8px">
+    <div class="col s12">
+         <form action="" method="get">
+             {{ SearchForm }}
+             <button class="btn btn-white" type="submit">
+                 <a href=""><img style="height: 30px" src="{% static 'researchActivities/images/icons8-search-more-90.png' %}" alt=""></a>
+             </button>
+
+        </form>
+    </div>
+</div>
+
+<div class="container" id="services" >
+
+    <h1 style="margin-bottom: 20px">لیست جزوه ها:</h1>
+
+    {% if jozveh %}
+        <div class="row">
+            {% for jozve in jozveh %}
+                <div class="col-md-4 text-center" style="margin-bottom: 15px">
+                    <div class="card">
+                        <img src="{{ jozve.jozveh_image.url }}" class="card-img-top borderImage" alt="...">
+                        <div class="card-body align-content-center card1" >
+                            <h5 class="card-title text-center" style="height: 60px">{{ jozve.title }}</h5>
+                            <hr>
+                            <p class="text-center font1">{{ jozve.prof }}</p>
+
+                            <a href="{{ jozve.pdfjozveh.url }}" download  class="btn btn-dark">دانلود</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+</div>
+</div>
+
+{% endblock content %}

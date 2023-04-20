@@ -1,0 +1,35 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}ویرایش کاربر{% endblock title %}
+
+{% block content %}
+    <div class="container" style="margin-top: 120px"></div>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10">
+                    <label for="">نام:</label>
+                    <p ><span class="card-title"></span>{{ userEditForm.first_name }}</p>
+                     <label for="">نام خانوادگی:</label>
+                    <p ><span class="card-title"></span>{{ userEditForm.last_name }}</p>
+                    <label for="">ایمیل:</label>
+                    <p ><span class="card-title"></span>{{ userEditForm.email }}</p>
+                    <label for="">تاریخ تولد:</label>
+                    <p ><span class="card-title"></span> {{ profileEditForm.birthday }} </p>
+
+                </div>
+                <div class="col-md-2">
+                <img src="{{ profileImage.url }}" style="width: 10rem;height: 10rem" alt="">
+                {{ profileEditForm.ProfileImage }}
+            </div>
+            </div>
+
+            <div class="button">
+                <button type="submit" class="btn btn-success">ذخیره</button>
+            </div>
+        </div>
+
+    </form>
+{% endblock content %}

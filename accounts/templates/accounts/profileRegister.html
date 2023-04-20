@@ -1,0 +1,39 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}ثبت نام{% endblock title %}
+
+{% block content %}
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="row" style="margin-top: 170px;margin-right:15%;border-radius: 10px;border: 1px solid gray;width: 70%;padding: 50px;">
+        <div class="col-md-6 " style="text-align: center">
+            <label for="">نام:</label>
+            <p class="font1">  {{ formdata.first_name }}</p>
+            <label for="">نام خانوادگی:</label>
+            <p class="font1">  {{ formdata.last_name }}</p>
+            <label for="">تاریخ تولد:</label>
+            <p class="font1"> {{ formdata.birthday }} </p>
+            <p class="font1">نمونه:21-02-2023</p>
+
+
+        </div>
+        <div class="col-md-6"style="text-align: center">
+            <label for="">نام کاربری:</label>
+            <p class="font1"> {{ formdata.username}}</p>
+            <label for="">ایمیل:</label>
+            <p class="font1"> {{ formdata.email}}</p>
+            <label for="">رمزعبور:</label>
+            <p class="font1"> {{ formdata.password }}</p>
+            <label for="">انتخاب تصویر:</label>
+            <div style="margin: 10px;padding-right: 60px;">
+                 {{ formdata.ProfileImage }}
+            </div>
+
+        </div>
+    </div>
+        <div style="text-align: center;margin-top: 10px">
+            <input type="submit" class="btn btn-success" value="ثبت نام">
+        </div>
+
+    </form>
+{% endblock content %}

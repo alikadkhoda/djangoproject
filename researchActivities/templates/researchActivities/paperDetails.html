@@ -1,0 +1,59 @@
+{% extends 'researchActivities/layout.html' %}
+{% load static %}
+{% block title %}جزییات مقالات من{% endblock title %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="row" style="margin-top: 111px;width: 100%; ">
+        <div class="col-md-6">
+            <img src="{{ papers.paper_image.url }}" id="imgs" alt="..." style="height: 250px; width: 250px; margin-right: 20%;margin-bottom: 30px ">
+        </div>
+        <div class="col-md-6" style="margin-top: 40px">
+            <ul>
+                <li>
+                    عنوان مقاله: {{ papers.title }}
+                </li>
+                <li>نویسندگان: {{ papers.author1 }} و {{ papers.author2 }}  و{{ papers.author3 }} و {{ papers.author4 }}</li>
+                <li>تاریخ انتشار: {{ papers.publication_date }}</li>
+                <li>{% if papers.conference %}
+                    کنفرانس: {{ papers.conference }}
+                {% else %}
+                    ژورنال: {{ papers.journal }}
+                {% endif %}
+                </li>
+                <li>{% if papers.conference %}
+                    محل برگزاری: {{ papers.conference.event_place }}
+                {% else %}
+                    ناشر: {{ papers.journal.publisher }}
+                {% endif %}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row" style="width: 100%">
+        <div class="col-md-12">
+            <label for="" style="margin-right: 20px;font-size: large">چکیده:</label>
+            <p style=" text-align: justify;text-justify: inter-word;padding: 20px; ">{{ papers.abstract }}</p>
+        </div>
+
+
+    </div>
+    <div style="margin-right: 20px">
+    {% if papers.pdfjournal %}
+        <label for="">دانلود نسخه کامل:</label>
+        <a href="{{ papers.pdfjournal.url }}" download class="btn btn-outline-success">دانلود </a>
+     {% endif %}
+    </div>
+
+
+    {#    <div class="card detail">#}
+    {#       <img src="{{ papers.paper_image.url }}" id="imgs" alt="..." style="height: 250px; width: 250px; margin: 15px">#}
+    {#    <h3>{{ papers.title }}</h3>#}
+    {#    <p style=" text-align: justify;text-justify: inter-word;padding: 10px ">{{ papers.abstract }}</p>#}
+    {#    </div>#}
+
+{% endblock content %}

@@ -1,0 +1,33 @@
+body{
+    font-family: 'IRANYekanWeb';
+}
+*{
+
+}
+p{
+    font-size: 20px;
+}
+.scroll-box{
+    overflow-y: scroll;
+    height: 200px;
+    padding: 1rem;
+}
+#services img{
+    object-fit: cover;
+    height: 15rem;
+    transition: transform 0.2s;
+}
+#services img:hover{
+    transform: scale(1.1);
+}
+.sz{
+    height: 30rem;
+
+}
+.sr{
+    margin-top: 3rem;
+}
+#imgs{
+    width: 4.5rem;
+    height: 4.5rem;
+}
