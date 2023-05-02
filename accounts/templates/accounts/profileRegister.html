@@ -3,9 +3,9 @@
 {% block title %}ثبت نام{% endblock title %}
 
 {% block content %}
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="" method="POST" enctype="multipart/form-data" style="">
     {% csrf_token %}
-    <div class="row" style="margin-top: 170px;margin-right:15%;border-radius: 10px;border: 1px solid gray;width: 70%;padding: 50px;">
+    <div class="row" style="margin:auto; margin-top: 170px;border-radius: 10px;border: 1px solid #dad8d8;width: 80%;padding: 50px;background-color:#e8e8e8 ">
         <div class="col-md-6 " style="text-align: center">
             <label for="">نام:</label>
             <p class="font1">  {{ formdata.first_name }}</p>
@@ -32,7 +32,7 @@
         </div>
     </div>
         <div style="text-align: center;margin-top: 10px">
-            <input type="submit" class="btn btn-success" value="ثبت نام">
+            <input type="submit" class="btn btn-primary" value="ثبت نام">
         </div>
 
     </form>

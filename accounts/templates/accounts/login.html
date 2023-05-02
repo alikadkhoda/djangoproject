@@ -3,7 +3,7 @@
 {% block title %}ورود کاربران{% endblock title %}
 
 {% block content %}
-    <div class="container">
+    <div class="container" >
         <br>
         <br>
         <br>
@@ -12,24 +12,23 @@
         <br>
         <br>
         <br>
-        <div class="col-md-3">
+        <br>
 
-        </div>
-     <form action="" method="POST" class="form-control">
-        {% csrf_token %}
-         <p>{{ errormessage }}</p>
-    <div class="mb-3">
-        <label for="username" class="form-label">نام کاربری:</label>
-        <input type="text" class="form-control" id="username" name="username" placeholder="نام کاربری را وارد کنید">
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">رمزعبور:</label>
-        <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور را وارد کنید">
-    </div>
-    <div class="mb-3">
-        <input type="submit" class="btn btn-success" value="ورود">
-    </div>
-    </form>
+        <form action="" method="POST" class="form-control  " style="width: 50%; margin: auto; background-color: #e8e8e8">
+            {% csrf_token %}
+            <p>{{ errormessage }}</p>
+            <div class="mb-3">
+                <label for="username" class="form-label">نام کاربری:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="نام کاربری را وارد کنید">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">رمزعبور:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="رمز عبور را وارد کنید">
+            </div>
+            <div class="mb-3 text-center">
+                <input type="submit" class="btn btn-primary" value="ورود">
+            </div>
+        </form>
 
     </div>
 

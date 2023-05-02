@@ -4,100 +4,218 @@
 
 {% block content %}
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="margin-top: 90px">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active carasel" data-bs-interval="10000" >
-        <div style="width: 50%;margin: auto">
-             <img src="{% static 'homePage/images/modares.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: 400px">
-        </div>
+    {#<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" style="margin-top: 90px">#}
+    {#  <div class="carousel-indicators">#}
+    {#    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>#}
+    {#    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>#}
+    {#    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>#}
+    {#  </div>#}
+    {#  <div class="carousel-inner">#}
+    {#    <div class="carousel-item active carasel" data-bs-interval="10000" >#}
+    {#        <div style="width: 50%;margin: auto">#}
+    {#             <img src="{% static 'homePage/images/modares.jpg' %}" class="d-block w-100" alt="..." style="width: 100%; height: 400px">#}
+    {#        </div>#}
+    {##}
+    {#      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">#}
+    {#          <a href="/researchActivities/papers/list/1" class="aa"><h5 >ارایه معیارهای جدید در سیستم های اطلاعاتی زنجیره تامین شرکتها</h5></a>#}
+    {#        <p class="caraselp">دراین مقاله با ارایه چهار معیار, روشی برای تعیین جایگاه سیستمهای اطلاعاتی در شرکتهایی که زنجیره تامین دارند, ارایه می شود.</p>#}
+    {#      </div>#}
+    {#    </div>#}
+    {#    <div class="carousel-item carasel" data-bs-interval="2000">#}
+    {#        <div style="width: 50%;margin: auto">#}
+    {#            <img src="{% static 'homePage/images/tehran.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">#}
+    {#        </div>#}
+    {##}
+    {#      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">#}
+    {#          <a href="/researchActivities/papers/list/2" class="aa"><h5>مقابله با حمله های "از کار اندازی سرویس" در شبکه های کامپیوتری</h5></a>#}
+    {#        <p class="caraselp">قابلیت دسترسی به معنای ارائه سرویس های مورد انتظار و تعریف شده سیستم در زمانهای مورد نظر به کاربران است.</p>#}
+    {#      </div>#}
+    {#    </div>#}
+    {#    <div class="carousel-item carasel" >#}
+    {#        <div style="width: 50%;margin: auto">#}
+    {#             <img src="{% static 'homePage/images/102127.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">#}
+    {#        </div>#}
+    {##}
+    {#      <div class="carousel-caption d-none d-md-block " style="color:white; background-color: #1a1e21">#}
+    {#          <a href="/researchActivities/papers/list/5" class="aa"><h5>اثرات انیمیشن ها بر روی کودکان</h5></a>#}
+    {#        <p class="caraselp"> تاثیر کارتون بر کودکان غیرقابل انکار است؛ چراکه کارتونها بر نوع رفتار و رشد شناختی بچه ها هم تاثیر مثبت و هم تاثیر منفی بگذارد.</p>#}
+    {#      </div>#}
+    {#    </div>#}
+    {#  </div>#}
+    {#  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">#}
+    {#    <span class="carousel-control-prev-icon" aria-hidden="true"></span>#}
+    {#    <span class="visually-hidden">Previous</span>#}
+    {#  </button>#}
+    {#  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">#}
+    {#    <span class="carousel-control-next-icon" aria-hidden="true"></span>#}
+    {#    <span class="visually-hidden">Next</span>#}
+    {#  </button>#}
+    {#</div>#}
+    <div class="navar">
 
-      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">
-          <a href="/researchActivities/papers/list/1" class="aa"><h5 >ارایه معیارهای جدید در سیستم های اطلاعاتی زنجیره تامین شرکتها</h5></a>
-        <p class="caraselp">دراین مقاله با ارایه چهار معیار, روشی برای تعیین جایگاه سیستمهای اطلاعاتی در شرکتهایی که زنجیره تامین دارند, ارایه می شود.</p>
-      </div>
     </div>
-    <div class="carousel-item carasel" data-bs-interval="2000">
-        <div style="width: 50%;margin: auto">
-            <img src="{% static 'homePage/images/tehran.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">
-        </div>
+    <div class="row w-100">
+        <div class="col-md-6  h-auto " >
+            <div style="display: flex; margin: 10px">
+                <img src="{% static 'researchActivities/images/imgHeader.jpg' %}" alt="" class="imgs">
+                <div style="padding: 30px">
+                    <span style="font-size: 22px" class="color-orange">علی کدخدا</span>
+                    <br>
+                    <span class="color-orange">برنامه نویس وب و اپلیکیشن</span>
+                </div>
 
-      <div class="carousel-caption d-none d-md-block" style="color:white; background-color: #1a1e21">
-          <a href="/researchActivities/papers/list/2" class="aa"><h5>مقابله با حمله های "از کار اندازی سرویس" در شبکه های کامپیوتری</h5></a>
-        <p class="caraselp">قابلیت دسترسی به معنای ارائه سرویس های مورد انتظار و تعریف شده سیستم در زمانهای مورد نظر به کاربران است.</p>
-      </div>
-    </div>
-    <div class="carousel-item carasel" >
-        <div style="width: 50%;margin: auto">
-             <img src="{% static 'homePage/images/102127.jpg' %}" class="d-block w-100" alt="..." style="width: 50%; height: 400px">
-        </div>
+            </div>
+         {#        images           #}
+            <div style=" padding: 10px;">
 
-      <div class="carousel-caption d-none d-md-block " style="color:white; background-color: #1a1e21">
-          <a href="/researchActivities/papers/list/5" class="aa"><h5>اثرات انیمیشن ها بر روی کودکان</h5></a>
-        <p class="caraselp"> تاثیر کارتون بر کودکان غیرقابل انکار است؛ چراکه کارتونها بر نوع رفتار و رشد شناختی بچه ها هم تاثیر مثبت و هم تاثیر منفی بگذارد.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="homeText" >
-{% for bio in biography %}
-        <p name="cat1" style="text-align: center">{{ bio.title }}</p>
-        <p class="textposition">
-            {{ bio.description }}
-        </p>
-        {% endfor %}
-</div>
-<div class="homeText mbtm" >
-{% for fav in favorites %}
-        <p>{{ fav.title }}</p>
-        <p class="textposition">
-            {{ fav.description }}
-        </p>
-        {% endfor %}
+                <p class="color-orange">اطلاعات تماس</p>
+                <hr class="hradj">
+                <div style="display: flex;flex-direction: column">
 
-</div>
-{#    {% if projects %}#}
-{#    <div class="container">#}
-{#        <p class="text-center">نمونه کارها:</p>#}
-{#         <div class="row">#}
-{#            {% for project in projects %}#}
-{#                <div class="col-md-4" style="margin-bottom: 15px">#}
-{#                    <div >#}
-{#                        <img src="{{ project.project_image.url }}" class="card-img-top" alt="..." style="height: 250px">#}
-{#                        <div class="card-body">#}
-{#                            <h5 class="card-title text-center" style="height: 60px">{{ project.title }}</h5>#}
-{##}
-{#                        </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#        </div>#}
-{#    {% endif %}#}
-{#    </div>#}
-    <p class="text-center">نمونه کارها:</p>
- <div class="container text-center mbtm" >
-        {% for project in projects  %}
-            <div class="mbtm">
-              <img src="{{ project.project_image.url }}" alt="" class="imgproject">
-              <p>{{ project.title }}</p>
-              <p>{{ project.description }}</p>
+                </div>
+                <div>
+                    <img src="{% static 'homePage/images/32.png' %}" alt="">
+                    <p  class="infoicon">09135657823</p>
+                </div>
+                <div>
+                    <img src="{% static 'homePage/images/email-vector-icon-png.png' %}" alt="">
+                    <p class="infoicon">kadkhoda@gmail.com</p>
+                </div>
+                <div>
+                    <img src="{% static 'homePage/images/nody-آیکون-مکان-png-1676794208.png' %}" alt="" style="width: 32px;height: 32px">
+                    <p class="infoicon" style="font-size: 15px">اردکان-خیابان-آیت ا... خاتمی-دانشگاه اردکان </p>
+                </div>
+
             </div>
 
-        {% endfor %}
+            <div style=" padding: 10px;">
+                <P class="color-orange">زبان</P>
+                <hr class="hradj">
+                <div style="display: flex;justify-content: space-between">
+                    <p>فارسی</p>
+                    <p class="label">زبان مادری</p>
+                </div>
+                <div style="display: flex;justify-content: space-between">
+                    <p>انگلیسی</p>
+                    <p class="label">متوسط</p>
+                </div>
+
+
+            </div>
+            <div style=" padding: 10px; ">
+                <P class="color-orange">مهارت ها</P>
+                <hr class="hradj">
+                <div style="display: flex;justify-content: space-around;flex-wrap: wrap">
+                    <p class="label">html</p>
+                    <p class="label">css</p>
+                    <p class="label">javascript</p>
+                    <p class="label">php</p>
+                    <p class="label">c++</p>
+                    <p class="label">java</p>
+                    <p class="label">SQL</p>
+                    <p class="label">python</p>
+                    <p class="label">react</p>
+                    <p class="label">laravel</p>
+                </div>
+
+            </div>
+            <div style=" padding: 10px;" >
+
+                {% for fav in favorites %}
+                 <p class="color-orange">{{ fav.title }}</p>
+                    <hr class="hradj">
+                 <p class="textjustify">
+                  {{ fav.description }}
+                 {% endfor %}
+            </div>
+        </div>
+
+        {#<div class="homeText" >#}
+        {#     {% for bio in biography %}#}
+        {#         <p name="cat1" style="text-align: center">{{ bio.title }}</p>#}
+        {#        <p class="textposition">#}
+        {#            {{ bio.description }}#}
+        {#        </p>#}
+        {#        {% endfor %}#}
+        {#</div>#}
+        {#        <hr>#}
+     <div class="col-md-6  h-auto ">
+         <div class="info-birthday">
+            <p class="f-17 color-orange">تولد 29 اردیبهشت 1380</p>
+             <p class="f-17 color-orange"> متولد شهرستان اردکان </p>
+         </div>
+         <div style="margin-top: 47px">
+              {% for bio in biography %}
+                 <p class="color-orange">{{ bio.title }}</p>
+                    <hr class="hradj">
+                 <p class="textjustify">
+                  {{ bio.description }}
+                 {% endfor %}
+         </div>
+            <div>
+                <p class="color-orange">سوابق شغلی</p>
+                <hr class="hradj">
+                <p>برنامه نویس شرکت گندله سازی</p>
+                <p class="f-17 color-orange">21 آذر 1401</p>
+                <P>برنامه نویس شرکت مهندسی ثنا</P>
+                <P class="f-17 color-orange">18 خرداد 1401</P>
+            </div>
+            <div>
+                <p class="color-orange">سوابق تحصیلی</p>
+                <hr class="hradj">
+                <p>کارشناسی مهندسی کامپیوتر</p>
+                <p class="color-orange f-17">1402-1403</p>
+                <p>دیپلم ریاضی-فیزیک</p>
+                <p class="color-orange f-17">1398-1399</p>
+            </div>
+        <div>
+
+        </div>
+
+    </div>
     </div>
 
+    </div>
+
+    {#<div class="homeText mbtm" >#}
+    {#{% for fav in favorites %}#}
+    {#        <p>{{ fav.title }}</p>#}
+    {#        <p class="textposition">#}
+    {#            {{ fav.description }}#}
+    {#        </p>#}
+    {#        {% endfor %}#}
+    {##}
+    {#</div>#}
+    {#    {% if projects %}#}
+    {#    <div class="container">#}
+    {#        <p class="text-center">نمونه کارها:</p>#}
+    {#         <div class="row">#}
+    {#            {% for project in projects %}#}
+    {#                <div class="col-md-4" style="margin-bottom: 15px">#}
+    {#                    <div >#}
+    {#                        <img src="{{ project.project_image.url }}" class="card-img-top" alt="..." style="height: 250px">#}
+    {#                        <div class="card-body">#}
+    {#                            <h5 class="card-title text-center" style="height: 60px">{{ project.title }}</h5>#}
+    {##}
+    {#                        </div>#}
+    {#                    </div>#}
+    {#                </div>#}
+    {#            {% endfor %}#}
+    {#        </div>#}
+    {#    {% endif %}#}
+    {#    </div>#}
+    {#    <p class="text-center">نمونه کارها:</p>#}
+    {# <div class="container text-center mbtm" >#}
+    {#        {% for project in projects  %}#}
+    {#            <div class="mbtm">#}
+    {#              <img src="{{ project.project_image.url }}" alt="" class="imgproject">#}
+    {#              <p>{{ project.title }}</p>#}
+    {#              <p>{{ project.description }}</p>#}
+    {#            </div>#}
+    {##}
+    {#        {% endfor %}#}
+    {#    </div>#}
+    {##}
 
 
 
